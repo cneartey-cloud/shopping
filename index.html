@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logos/logo.png" width="180">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">អំពីពួកយើង</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">ផលិតផល</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">ទំនាក់ទំនង</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+    <!-- start hero -->
+    <div class="hero">
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="assets/images/banners/c1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="assets/images/banners/c2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="assets/images/banners/c3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <span>This is an infinite scrolling marquee text effect using modern CSS. &nbsp;</span>
+            <!-- Duplicate the content exactly to create a seamless loop -->
+            <span aria-hidden="true">This is an infinite scrolling marquee text effect using modern CSS. &nbsp;</span>
+        </div>
+    </div>
+    <!-- end hero -->
+
+
+    <div class="container">
+        <section class="category">
+            <div id="animation" class="mt-4 mb-4 text-center">
+                <button>
+                    <h3
+                        class="text-center mt-3 mb-3  animate__animated animate__slideInRight animate__infinite	infinite animate__slower ">
+                        ប្រភេទផលិតផល</h3>
+                </button>
+            </div>
+
+            <div class="row gx-2 gy-2">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card card_cate">
+                        <img src="assets/images/categories/p1.png" class="card-img-top category_img" alt="...">
+                        <div class="card-body">
+                            <a class="card-title text-center" href="shoping.html#shoes-tab" id="shoes"  rel="noopener noreferrer">Shoes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card card_cate">
+                        <img src="assets/images/categories/p2.png" class="card-img-top category_img" alt="...">
+                        <div class="card-body">
+                            <a href="shoping.html#bag-tab" id="assessory" class="card-title text-center"  rel="noopener noreferrer">Bag</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card card_cate">
+                        <img src="assets/images/categories/p3.png" class="card-img-top category_img" alt="...">
+                        <div class="card-body">
+                            <a href="shoping.html#tshirt-tab" id="desktop" class="card-title text-center"  rel="noopener noreferrer">T-shirt</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card card_cate">
+                        <img src="assets/images/categories/p4.png" class="card-img-top category_img" alt="...">
+                        <div class="card-body">
+                            <a href="shoping.html#dress-tab" id="component" class="card-title text-center"  rel="noopener noreferrer">Dress</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card card_cate">
+                        <img src="assets/images/categories/p5.png" class="card-img-top category_img" alt="...">
+                        <div class="card-body">
+                            <a href="shoping.html#glasses-tab" id="monitor" class="card-title text-center"  rel="noopener noreferrer">Glasses</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card card_cate">
+                        <img src="assets/images/categories/p6.png" class="card-img-top category_img" alt="...">
+                        <div class="card-body">
+                            <a href="shoping.html#jean-tab" target="_blank" id="network" class="card-title text-center"
+                                rel="noopener noreferrer">Jean</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new_arrival">
+            <div class="row mt-5 mb-5">
+                <h3>ផលិតផលនឹងមកដល់ឆាប់ឆាប់ៗ</h3>
+                <div class="col-12 mb-5">
+                    <swiper-container class="mySwiper" init="false" pagination="false" navigation="true"
+                        autoplay-delay="3000">
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p3.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">t-shirt</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p3.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">T-shirt</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p1.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">shoes</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p1.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">shoes</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p2.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">bag</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p2.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">bag</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p3.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">t-shirt</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p3.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">t-shirt</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="product">
+                                <img src="assets/images/categories/p1.png" width="100%">
+                                <div class="description">
+                                    <h4 class="mt-2">shoes</h4>
+                                    <span class="text-danger">price: 25$</span>
+                                    <div class="text-start" style="font-size: 10px;">
+                                        25$ For All Products
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="site-footer-brand" href="index.html" aria-label="Computer Shop Saven home">
+                        <img src="assets/images/logos/logo.png" alt="Computer Shop Saven">
+                    </a>
+                    <p>Your trusted destination for computers, components, and accessories. Find the right gear for work, study, and play.</p>
+                </div>
+                <div class="col-6 col-lg-2 col-md-3">
+                    <h2>Explore</h2>
+                    <ul class="site-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="shoping.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 col-md-3">
+                    <h2>Shop categories</h2>
+                    <ul class="site-footer-links">
+                        <li><a href="shoping.html#shoes-tab">Shoes</a></li>
+                        <li><a href="shoping.html#bag-tab">Bag</a></li>
+                        <li><a href="shoping.html#tshirt-tab">T-shirt</a></li>
+                        <li><a href="shoping.html#dress-tab">Dress</a></li>
+                        <li><a href="shoping.html#glasses-tab">Glasses</a></li>
+                        <li><a href="shoping.html#jean-tab">Jean</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h2>Need a hand?</h2>
+                    <p>Have a question about a product or need help choosing your setup? Our team is happy to help.</p>
+                    <a class="d-inline-block mt-3" href="contact.html">Contact our team <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <div class="site-footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
+                <p>© Computer Shop Saven. All rights reserved.</p>
+                <a href="contact.html">Contact us</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
+    <script>
+        const swiperEl = document.querySelector('swiper-container');
+        Object.assign(swiperEl, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 15,
+                },
+            },
+        });
+        swiperEl.initialize();
+    </script>
+</body>
+
+</html>

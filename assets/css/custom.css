@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "Koulen";
+  src: url("../fonts/Koulen/Koulen-Regular.ttf");
+}
+@font-face {
+  font-family: "Battambang";
+  src: url("../fonts/Battambang/Battambang-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSanRegular";
+  src: url("../fonts/Open_Sans/static/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSanBold";
+  src: url("../fonts/Open_Sans/static/OpenSans-SemiBold.ttf");
+}
+body {
+  font-family: "Battambang", "OpenSanRegular";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-link {
+  font-family: "Koulen", "OpenSanBold";
+  color: rgb(4, 4, 86);
+}
+img.card-img-top.category_img {
+  height: 100px;
+  object-fit: contain;
+}
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+.nav-link:hover {
+  font-family: "Koulen", "OpenSanBold";
+  color: rgb(106, 4, 4);
+  transition: 1s;
+  scale: 1.2;
+}
+.category_img:hover {
+  scale: 1.1;
+  transition: 1s;
+}
+/* Swipper style */
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: #444; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* End Swipper Style */
+.product {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+/* Marquee Text */
+.marquee-container {
+  overflow: hidden; /* Hides the content that scrolls off-screen */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  background: #111; /* Optional track styling */
+  color: #fff;
+  padding: 15px 0;
+  display: flex;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 15s linear infinite;
+}
+
+/* Pause the animation on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track span {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 50px; /* Adds spacing between loops */
+}
+
+/* The core animation driving the layout */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Moves exactly halfway to align with the duplicate text */
+  }
+}
+
+/* End Marquee Text */
+
+/* Animate Button */
+#animation button {
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 6px 16px;
+  color: red;
+}
+
+#animation button:before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(5px);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  background-size: 400%;
+  transition: opacity 0.3s ease-in-out;
+  animation: animate 20s linear infinite;
+  opacity: 1;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/*End Animate Button */
+
+/* Shared site footer */
+.site-footer {
+  padding: 56px 0 0;
+  color: #d7e2f0;
+  background: #101d32;
+}
+
+.site-footer h2,
+.site-footer h3 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-family: "OpenSanBold", "OpenSanRegular", sans-serif;
+  font-size: 1rem;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #aebdd0;
+  font-family: "OpenSanRegular", sans-serif;
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+.site-footer-brand {
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.site-footer-brand img {
+  display: block;
+  width: min(100%, 205px);
+  height: auto;
+}
+
+.site-footer-links {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: #c4d2e4;
+  font-family: "OpenSanRegular", sans-serif;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.site-footer a:hover {
+  color: #69b5ff;
+}
+
+.site-footer-bottom {
+  margin-top: 42px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(213, 227, 245, .14);
+  color: #9eafc5;
+  font-family: "OpenSanRegular", sans-serif;
+  font-size: .82rem;
+}
+
+.site-footer-bottom p {
+  font-size: inherit;
+}
+
+@media (max-width: 767.98px) {
+  .site-footer {
+    padding-top: 42px;
+  }
+
+  .site-footer-bottom {
+    margin-top: 30px;
+  }
+}

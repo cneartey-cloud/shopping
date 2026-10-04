@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Computer Shop Saven for computer sales, product advice and technical support.">
+    <title>Contact Us | Computer Shop Saven</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+        :root {
+            --contact-ink: #10233f;
+            --contact-muted: #62738a;
+            --contact-blue: #1478e8;
+            --contact-pale: #f3f7fc;
+            --contact-line: #e2eaf3;
+        }
+
+        body {
+            color: var(--contact-ink);
+            background: #fff;
+            font-family: "OpenSanRegular", "Open Sans", sans-serif;
+        }
+
+        .contact-page h1,
+        .contact-page h2,
+        .contact-page h3,
+        .contact-page h4,
+        .contact-page .nav-link {
+            color: var(--contact-ink);
+            font-family: "OpenSanBold", "Open Sans", sans-serif;
+        }
+
+        .contact-page .nav-link:hover,
+        .contact-page h1:hover,
+        .contact-page h2:hover,
+        .contact-page h3:hover,
+        .contact-page h4:hover {
+            color: var(--contact-blue);
+            scale: 1;
+        }
+
+        .contact-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 82px 0 92px;
+            color: #fff;
+            background:
+                radial-gradient(ellipse at 82% 15%, rgba(41, 146, 255, .34), transparent 34%),
+                linear-gradient(118deg, #0c1d36 0%, #102c50 58%, #113b69 100%);
+        }
+
+        .contact-hero::after {
+            position: absolute;
+            top: -145px;
+            right: -90px;
+            width: 490px;
+            height: 490px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 50%;
+            box-shadow: 0 0 0 42px rgba(255, 255, 255, .035), 0 0 0 84px rgba(255, 255, 255, .025);
+            content: "";
+            pointer-events: none;
+        }
+
+        .contact-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 18px;
+            color: #b8d9ff;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+
+        .contact-hero .eyebrow::before {
+            width: 24px;
+            height: 2px;
+            background: #54a8ff;
+            content: "";
+        }
+
+        .contact-hero h1 {
+            max-width: 700px;
+            margin: 0 0 18px;
+            color: #fff;
+            font-size: clamp(2.55rem, 6vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -.055em;
+            line-height: 1.05;
+        }
+
+        .contact-hero p {
+            max-width: 560px;
+            margin: 0;
+            color: #d2dfed;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .contact-main {
+            padding: 0 0 86px;
+            background: linear-gradient(#f5f8fc 0, #f5f8fc 205px, #fff 205px, #fff 100%);
+        }
+
+        .contact-layout {
+            position: relative;
+            z-index: 2;
+            margin-top: -36px;
+        }
+
+        .contact-panel,
+        .message-panel {
+            height: 100%;
+            border: 1px solid var(--contact-line);
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 16px 48px rgba(19, 48, 82, .08);
+        }
+
+        .contact-panel {
+            padding: 32px;
+        }
+
+        .message-panel {
+            padding: 38px;
+        }
+
+        .section-kicker {
+            margin-bottom: 8px;
+            color: var(--contact-blue);
+            font-size: .76rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .contact-panel h2,
+        .message-panel h2 {
+            margin: 0 0 12px;
+            font-size: 1.55rem;
+            font-weight: 750;
+            letter-spacing: -.035em;
+        }
+
+        .panel-intro {
+            margin-bottom: 28px;
+            color: var(--contact-muted);
+            font-size: .94rem;
+            line-height: 1.7;
+        }
+
+        .contact-option {
+            display: flex;
+            gap: 15px;
+            padding: 19px 0;
+            border-top: 1px solid var(--contact-line);
+        }
+
+        .contact-option-icon {
+            display: grid;
+            flex: 0 0 44px;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 12px;
+            color: var(--contact-blue);
+            background: #edf5ff;
+        }
+
+        .contact-option-icon svg {
+            width: 21px;
+            height: 21px;
+        }
+
+        .contact-option h3 {
+            margin: 0 0 4px;
+            font-size: .96rem;
+            font-weight: 700;
+        }
+
+        .contact-option p {
+            margin: 0;
+            color: var(--contact-muted);
+            font-size: .86rem;
+            line-height: 1.6;
+        }
+
+        .contact-option a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 7px;
+            color: var(--contact-blue);
+            font-size: .86rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .contact-option a:hover {
+            color: #075bb7;
+            text-decoration: underline;
+        }
+
+        .message-panel .panel-intro {
+            margin-bottom: 25px;
+        }
+
+        .contact-form label {
+            margin-bottom: 7px;
+            color: #263b57;
+            font-size: .85rem;
+            font-weight: 700;
+        }
+
+        .contact-form .form-control,
+        .contact-form .form-select {
+            min-height: 48px;
+            border-color: #dce5ef;
+            border-radius: 9px;
+            color: var(--contact-ink);
+            font-family: inherit;
+            font-size: .92rem;
+            box-shadow: none;
+        }
+
+        .contact-form textarea.form-control {
+            min-height: 132px;
+            resize: vertical;
+        }
+
+        .contact-form .form-control:focus,
+        .contact-form .form-select:focus {
+            border-color: #6eaff5;
+            box-shadow: 0 0 0 3px rgba(20, 120, 232, .12);
+        }
+
+        .contact-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 50px;
+            padding: 0 22px;
+            border: 0;
+            border-radius: 9px;
+            color: #fff;
+            background: var(--contact-blue);
+            font-family: inherit;
+            font-size: .92rem;
+            font-weight: 700;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .contact-submit:hover {
+            transform: translateY(-1px);
+            background: #0867cf;
+        }
+
+        .contact-submit svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .form-note {
+            margin: 12px 0 0;
+            color: #74849a;
+            font-size: .76rem;
+            line-height: 1.55;
+        }
+
+        .form-feedback {
+            margin-top: 16px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            color: #24496f;
+            background: #eef6ff;
+            font-size: .86rem;
+        }
+
+        .map-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 24px;
+            padding: 24px 28px;
+            border: 1px solid var(--contact-line);
+            border-radius: 15px;
+            background: var(--contact-pale);
+        }
+
+        .map-banner-copy {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .map-banner .contact-option-icon {
+            background: #fff;
+        }
+
+        .map-banner h2 {
+            margin: 0 0 4px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .map-banner p {
+            margin: 0;
+            color: var(--contact-muted);
+            font-size: .86rem;
+        }
+
+        .map-link {
+            display: inline-flex;
+            flex: 0 0 auto;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 15px;
+            border: 1px solid #c8d8ea;
+            border-radius: 8px;
+            color: #155fae;
+            background: #fff;
+            font-size: .84rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: border-color .2s ease, background .2s ease;
+        }
+
+        .map-link:hover {
+            border-color: #91b9e4;
+            background: #fafdff;
+        }
+
+        .map-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .contact-page .site-footer h2,
+        .contact-page .site-footer h3 {
+            color: #fff;
+        }
+
+        .contact-page .site-footer p {
+            color: #aebdd0;
+        }
+
+        .contact-page .site-footer a {
+            color: #c4d2e4;
+        }
+
+        .contact-page .site-footer a:hover {
+            color: #69b5ff;
+        }
+
+        @media (max-width: 767.98px) {
+            .contact-hero {
+                padding: 65px 0 75px;
+            }
+
+            .contact-panel,
+            .message-panel {
+                padding: 26px;
+            }
+
+            .contact-layout {
+                row-gap: 18px;
+            }
+
+            .map-banner {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 22px;
+            }
+
+            .map-link {
+                margin-left: 60px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-page">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logos/logo.png" width="180">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">ទំព័រដើម</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">អំពីពួកយើង</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="product.html">ផលិតផល</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html" aria-current="page">ទំនាក់ទំនង</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-hero" aria-labelledby="contact-heading">
+                <div class="container">
+                    <div class="eyebrow">We’re here to help</div>
+                    <h1 id="contact-heading">Let’s talk tech.</h1>
+                    <p>Need help choosing your next setup, have a question about a product, or looking for technical support? Our team is ready to help.</p>
+                </div>
+            </section>
+
+            <section class="contact-main" aria-label="Contact Computer Shop Saven">
+                <div class="container">
+                    <div class="row g-4 contact-layout">
+                        <div class="col-lg-5">
+                            <aside class="contact-panel" aria-labelledby="contact-options-heading">
+                                <div class="section-kicker">Get in touch</div>
+                                <h2 id="contact-options-heading">How can we help?</h2>
+                                <p class="panel-intro">From picking the right computer to getting your gear back up and running, we’re happy to point you in the right direction.</p>
+
+                                <div class="contact-option">
+                                    <span class="contact-option-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h10M7 13h6"/></svg>
+                                    </span>
+                                    <div>
+                                        <h3>Product advice</h3>
+                                        <p>Tell us what you need and we’ll help you find the right laptop, desktop, or component.</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-option">
+                                    <span class="contact-option-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2M16 3h5v5M21 3l-6 6"/></svg>
+                                    </span>
+                                    <div>
+                                        <h3>Technical support</h3>
+                                        <p>Questions about setup, repairs, or an order? Share a few details in the form and we’ll take a look.</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-option">
+                                    <span class="contact-option-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                                    </span>
+                                    <div>
+                                        <h3>Visit our shop</h3>
+                                        <p>Explore the range in person and talk through your setup with our team.</p>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <section class="message-panel" aria-labelledby="message-heading">
+                                <div class="section-kicker">Send us a message</div>
+                                <h2 id="message-heading">What can we help you with?</h2>
+                                <p class="panel-intro">Fill in the details below and tell us a little about what you’re looking for.</p>
+
+                                <form class="contact-form" id="contactForm">
+                                    <div class="row g-3">
+                                        <div class="col-sm-6">
+                                            <label for="fullName" class="form-label">Your name</label>
+                                            <input type="text" class="form-control" id="fullName" name="name" autocomplete="name" placeholder="e.g. Dara Sok" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="email" class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="topic" class="form-label">What do you need help with?</label>
+                                            <select class="form-select" id="topic" name="topic" required>
+                                                <option value="" selected disabled>Select a topic</option>
+                                                <option>Product recommendation</option>
+                                                <option>Product or order question</option>
+                                                <option>Technical support or repair</option>
+                                                <option>Something else</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message" class="form-label">Your message</label>
+                                            <textarea class="form-control" id="message" name="message" placeholder="Tell us a little more so we can help..." required></textarea>
+                                        </div>
+                                        <div class="col-12 pt-1">
+                                            <button class="contact-submit" type="submit">
+                                                Send message
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4Z"/></svg>
+                                            </button>
+                                            <p class="form-note">This contact form is a front-end demo and is not connected to a message service yet.</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-feedback" id="formFeedback" role="status" aria-live="polite" hidden></div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="map-banner">
+                        <div class="map-banner-copy">
+                            <span class="contact-option-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                            </span>
+                            <div>
+                                <h2>Prefer to visit in person?</h2>
+                                <p>Find Computer Shop Saven on Google Maps and plan your visit.</p>
+                            </div>
+                        </div>
+                        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Computer+Shop+Saven" target="_blank" rel="noopener noreferrer">
+                            Find us on Maps
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M10 14 21 3"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6">
+                        <a class="site-footer-brand" href="index.html" aria-label="Computer Shop Saven home">
+                            <img src="assets/images/logos/logo.png" alt="Computer Shop Saven">
+                        </a>
+                        <p>Your trusted destination for computers, components, and accessories. Find the right gear for work, study, and play.</p>
+                    </div>
+                    <div class="col-6 col-lg-2 col-md-3">
+                        <h2>Explore</h2>
+                        <ul class="site-footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="product.html">Products</a></li>
+                            <li><a href="shoping.html">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 col-md-3">
+                        <h2>Shop categories</h2>
+                        <ul class="site-footer-links">
+                            <li><a href="shoping.html#shoes-tab">Shoes</a></li>
+                            <li><a href="shoping.html#bag-tab">Bag</a></li>
+                            <li><a href="shoping.html#tshirt-tab">T-shirt</a></li>
+                            <li><a href="shoping.html#dress-tab">Dress</a></li>
+                            <li><a href="shoping.html#glasses-tab">Glasses</a></li>
+                            <li><a href="shoping.html#jean-tab">Jean</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h2>Need a hand?</h2>
+                        <p>Have a question about a product or need help choosing your setup? Our team is happy to help.</p>
+                        <a class="d-inline-block mt-3" href="contact.html">Contact our team <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+                <div class="site-footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
+                    <p>© Computer Shop Saven. All rights reserved.</p>
+                    <a href="contact.html">Contact us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const feedback = document.getElementById("formFeedback");
+            feedback.textContent = "Thanks for reaching out. This demo form is not connected to a message service, so your message has not been sent.";
+            feedback.hidden = false;
+        });
+    </script>
+</body>
+</html>
